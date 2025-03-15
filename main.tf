@@ -11,12 +11,14 @@ resource "aws_instance" "myinstance1" {
   instance_type = var.instance_type
 }
 
-resource "aws_instance" "myinstance002" {
-  ami           = var.instance_ami_hyd
-  count         = var.instance_count
-  instance_type = var.instance_type_hyd
-  provider  = aws.hyd
-}
+
+#resource "aws_instance" "myinstance002" {
+#  ami           = var.instance_ami_hyd
+#  count         = var.instance_count
+#  instance_type = var.instance_type_hyd
+#  provider  = aws.hyd
+#}
+
 
 
 resource "aws_vpc" "myvpc" {
