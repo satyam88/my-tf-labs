@@ -5,7 +5,11 @@ resource "aws_instance" "myinstance" {
 }
 
 
-
+resource "aws_instance" "myinstance1" {
+  ami           = var.instance_ami_mumbai
+  count         = var.instance_count
+  instance_type = var.instance_type
+}
 
 resource "aws_instance" "myinstance002" {
   ami           = var.instance_ami_hyd
